@@ -3,15 +3,16 @@ import { darken, lighten } from "polished";
 import { Field } from "formik";
 
 export const Container = styled.div`
-  display: flex;
-  flex-direction: column;
   max-width: 55rem;
-  border: 1px solid black;
+  height: 80rem;
+  margin: 17rem 14rem 0;
 `;
 
 export const Label = styled.label`
+  display: inline-block;
+  padding: 1rem 0;
   font-size: 4rem;
-  font-weight: 400;
+  margin-bottom: 2.2rem;
 `;
 
 export const Input = styled(Field)`
@@ -20,6 +21,7 @@ export const Input = styled(Field)`
   border: 1px solid #dcdcdc;
   border-radius: 1rem;
   width: 100%;
+  margin-top: 0.8rem;
 
   ${({ valid }) =>
     valid &&
@@ -46,6 +48,12 @@ export const Input = styled(Field)`
         border: 1px solid #BF310C;
         outline: none;
       }
+    `}
+
+    ${({ component }) =>
+    component &&
+    css`
+      height: 20rem;
     `}
 `;
 

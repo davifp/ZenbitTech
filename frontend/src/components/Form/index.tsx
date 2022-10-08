@@ -13,63 +13,61 @@ export const Form: React.FC = () => {
   });
 
   return (
-    <>
-      <Container>
-        <Formik
-          initialValues={{ name: "", email: "", message: "" }}
-          validationSchema={formSchema}
-          onSubmit={(values) => {
-            console.log(values);
-          }}
-        >
-          {({ errors, touched, isSubmitting, handleSubmit, isValid }) => (
-            <FormikForm name="contact" method="post" onSubmit={handleSubmit}>
-              <Label htmlFor="reachout">Reach out to us!</Label>
-              <Input
-                type="text"
-                name="name"
-                autoCorrect="off"
-                autoComplete="name"
-                placeholder="Your name*"
-                valid={touched.name && !errors.name}
-                error={touched.name && errors.name}
-              />
-              {errors.name && touched.name && (
-                <StyledErrorMessage>{errors.name}</StyledErrorMessage>
-              )}
-              <Input
-                type="email"
-                name="email"
-                autoCapitalize="off"
-                autoCorrect="off"
-                autoComplete="email"
-                placeholder="Your email*"
-                valid={touched.email && !errors.email}
-                error={touched.email && errors.email}
-              />
-              <ErrorMessage name="email">
-                {(msg) => <StyledErrorMessage>{msg}</StyledErrorMessage>}
-              </ErrorMessage>
-              <Input
-                component="textarea"
-                name="message"
-                autoCapitalize="on"
-                autoCorrect="off"
-                autoComplete="off"
-                placeholder="Your message*"
-                valid={touched.message && !errors.message}
-                error={touched.message && errors.message}
-              />
-              <ErrorMessage name="message">
-                {(msg) => <StyledErrorMessage>{msg}</StyledErrorMessage>}
-              </ErrorMessage>
-              <Button type="submit" disabled={!isValid}>
-                Send message
-              </Button>
-            </FormikForm>
-          )}
-        </Formik>
-      </Container>
-    </>
+    <Container>
+      <Formik
+        initialValues={{ name: "", email: "", message: "" }}
+        validationSchema={formSchema}
+        onSubmit={(values) => {
+          console.log(values);
+        }}
+      >
+        {({ errors, touched, isSubmitting, handleSubmit, isValid }) => (
+          <FormikForm name="contact" method="post" onSubmit={handleSubmit}>
+            <Label htmlFor="reachout">Reach out to us!</Label>
+            <Input
+              type="text"
+              name="name"
+              autoCorrect="off"
+              autoComplete="name"
+              placeholder="Your name*"
+              valid={touched.name && !errors.name}
+              error={touched.name && errors.name}
+            />
+            {errors.name && touched.name && (
+              <StyledErrorMessage>{errors.name}</StyledErrorMessage>
+            )}
+            <Input
+              type="email"
+              name="email"
+              autoCapitalize="off"
+              autoCorrect="off"
+              autoComplete="email"
+              placeholder="Your email*"
+              valid={touched.email && !errors.email}
+              error={touched.email && errors.email}
+            />
+            <ErrorMessage name="email">
+              {(msg) => <StyledErrorMessage>{msg}</StyledErrorMessage>}
+            </ErrorMessage>
+            <Input
+              component="textarea"
+              name="message"
+              autoCapitalize="on"
+              autoCorrect="off"
+              autoComplete="off"
+              placeholder="Your message*"
+              valid={touched.message && !errors.message}
+              error={touched.message && errors.message}
+            />
+            <ErrorMessage name="message">
+              {(msg) => <StyledErrorMessage>{msg}</StyledErrorMessage>}
+            </ErrorMessage>
+            <Button type="submit" disabled={!isValid}>
+              Send message
+            </Button>
+          </FormikForm>
+        )}
+      </Formik>
+    </Container>
   );
 };
