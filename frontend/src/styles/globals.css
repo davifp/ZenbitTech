@@ -3,6 +3,9 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
+:root {
+  --button-color: #fad34f;
+}
 
 a {
   color: inherit;
@@ -13,4 +16,5 @@ a {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
+  font-size: 62.5%;
 }
