@@ -12,3 +12,18 @@ export const MainContainer = styled.div`
   border: 1px solid black;
   background-image: url("cloud.svg");
 `;
+
+export const ImageContainer = styled.div`
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+
+  @media screen and (max-width: 1024px) {
+    top: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 425px) {
+    display: none;
+  }
+`;
