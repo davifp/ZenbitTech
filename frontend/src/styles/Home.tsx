@@ -9,7 +9,6 @@ export const Container = styled.div`
 
 export const MainContainer = styled.div`
   display: flex;
-  border: 1px solid black;
   background-image: url("cloud.svg");
 `;
 

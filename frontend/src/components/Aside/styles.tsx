@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const AsideContainer = styled.aside`
-  border: 1px solid black;
   position: relative;
   width: 100%;
 

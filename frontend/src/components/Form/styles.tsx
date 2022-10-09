@@ -6,7 +6,6 @@ export const Container = styled.div`
   max-width: 55rem;
   height: 80rem;
   margin: 17rem 5rem 0 15rem;
-  border: 1px solid yellow;
 
   @media screen and (max-width: 1024px) {
     max-width: 40rem;
