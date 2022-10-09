@@ -109,3 +109,14 @@ export const Button = styled.button`
     width: 100%;
   }
 `;
+
+export const Success = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: 55rem;
+  height: 60rem;
+  color: green;
+  font-size: 5rem;
+`;
