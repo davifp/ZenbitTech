@@ -18,3 +18,10 @@ a {
   margin: 0;
   font-size: 62.5%;
 }
+
+@media screen and (max-width: 425px) {
+  html,
+  body {
+    font-size: 45%;
+  }
+}

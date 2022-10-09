@@ -1,12 +1,16 @@
 import type { NextPage } from "next";
+import { Aside } from "../components/Aside";
 import { Footer } from "../components/Footer";
 import { Form } from "../components/Form";
-import { Container } from "../styles/Home";
+import { Container, MainContainer } from "../styles/Home";
 
 const Home: NextPage = () => {
   return (
     <Container>
-      <Form />
+      <MainContainer>
+        <Form />
+        <Aside />
+      </MainContainer>
       <Footer />
     </Container>
   );

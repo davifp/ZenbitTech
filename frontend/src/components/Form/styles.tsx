@@ -5,7 +5,22 @@ import { Field } from "formik";
 export const Container = styled.div`
   max-width: 55rem;
   height: 80rem;
-  margin: 17rem 14rem 0;
+  margin: 17rem 5rem 0 15rem;
+  border: 1px solid yellow;
+
+  @media screen and (max-width: 1024px) {
+    max-width: 40rem;
+    margin: 5rem;
+  }
+
+  @media screen and (max-width: 768px) {
+    margin: 10rem;
+    max-width: 55rem;
+  }
+
+  @media screen and (max-width: 425px) {
+    margin: 2rem;
+  }
 `;
 
 export const Label = styled.label`
@@ -89,5 +104,9 @@ export const Button = styled.button`
     &:focus {
       cursor: not-allowed;
     }
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
   }
 `;

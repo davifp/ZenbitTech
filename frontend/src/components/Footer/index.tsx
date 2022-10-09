@@ -16,7 +16,6 @@ export const Footer: React.FC = () => {
       </div>
       <div
         style={{
-          border: "1px solid black",
           position: "absolute",
           top: 0,
           right: 127,
@@ -31,7 +30,6 @@ export const Footer: React.FC = () => {
       </div>
       <div
         style={{
-          border: "1px solid black",
           position: "absolute",
           top: 50,
           right: 0,
