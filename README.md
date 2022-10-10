@@ -7,7 +7,7 @@ Project developed with Next.js, Nest.js and Mysql database.
 
 ## Production
 
-Server might take some time do start!
+Server might take some time to start!
 
 You can access the project on [https://zenbit.vercel.app/](https://zenbit.vercel.app/)
 and check database data on [https://davifp.herokuapp.com/message](https://davifp.herokuapp.com/message).
