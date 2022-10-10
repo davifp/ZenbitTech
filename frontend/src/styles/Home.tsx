@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -9,7 +10,12 @@ export const Container = styled.div`
 
 export const MainContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   background-image: url("cloud.svg");
+
+  @media screen and (max-width: 1024px) {
+    justify-content: center;
+  }
 `;
 
 export const ImageContainer = styled.div`

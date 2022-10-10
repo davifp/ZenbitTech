@@ -9,7 +9,7 @@ import {
   Success,
 } from "./styles";
 import { api } from "../../services/api";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Data {
   name: string;
@@ -21,10 +21,11 @@ export const Form: React.FC = () => {
   const [dataError, setDataError] = useState();
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = async (data: Data) => {
+  const handleSubmit = async (data: Data, resetForm) => {
     console.log(data);
     try {
       const response = await api.post("message", data);
+      resetForm();
       setIsSuccess(true);
     } catch (err: any) {
       setDataError(err);
@@ -46,7 +47,9 @@ export const Form: React.FC = () => {
         <Formik
           initialValues={{ name: "", email: "", message: "" }}
           validationSchema={formSchema}
-          onSubmit={(data) => handleSubmit(data)}
+          onSubmit={(data, { resetForm }) => {
+            handleSubmit(data, resetForm);
+          }}
         >
           {({ errors, touched, isSubmitting, handleSubmit, isValid }) => (
             <FormikForm name="contact" method="post" onSubmit={handleSubmit}>

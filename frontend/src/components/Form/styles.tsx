@@ -3,16 +3,11 @@ import { darken, lighten } from "polished";
 import { Field } from "formik";
 
 export const Container = styled.div`
-  max-width: 55rem;
+  width: 55rem;
   height: 80rem;
   margin: 17rem 5rem 0 15rem;
 
   @media screen and (max-width: 1024px) {
-    max-width: 40rem;
-    margin: 5rem;
-  }
-
-  @media screen and (max-width: 768px) {
     margin: 10rem;
     max-width: 55rem;
   }
