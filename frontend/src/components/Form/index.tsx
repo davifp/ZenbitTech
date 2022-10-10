@@ -9,7 +9,9 @@ import {
   Success,
 } from "./styles";
 import { api } from "../../services/api";
-import { useEffect, useState } from "react";
+import { useState } from "react";
+import { changeValue } from "../../Redux/name";
+import { useAppDispatch, useAppSelector } from "../../Redux/hooks";
 
 interface Data {
   name: string;
@@ -21,12 +23,16 @@ export const Form: React.FC = () => {
   const [dataError, setDataError] = useState();
   const [isSuccess, setIsSuccess] = useState(false);
 
-  const handleSubmit = async (data: Data, resetForm) => {
+  const name = useAppSelector((state) => state.name.value);
+  const dispatch = useAppDispatch();
+
+  const handleSubmit = async (data: Data, resetForm: any) => {
     console.log(data);
     try {
       const response = await api.post("message", data);
       resetForm();
       setIsSuccess(true);
+      dispatch(changeValue(data.name));
     } catch (err: any) {
       setDataError(err);
     }
@@ -100,7 +106,7 @@ export const Form: React.FC = () => {
         </Formik>
       ) : (
         <Success>
-          <p>Message was successfully sent!</p>
+          <p>{name}! Your message was successfully sent!</p>
         </Success>
       )}
     </Container>
