@@ -6,22 +6,22 @@ export const Nav: React.FC = () => {
   return (
     <NavContainer>
       <Link href="https://www.linkedin.com/company/zenbit-tech/">
-        <a>
+        <a target="_blank">
           <FaLinkedin size={20} color={"#989898"} />
         </a>
       </Link>
       <Link href="https://twitter.com/">
-        <a>
+        <a target="_blank">
           <FaTwitter size={20} color={"#989898"} />
         </a>
       </Link>
       <Link href="https://www.facebook.com/zenBitTech/">
-        <a>
+        <a target="_blank">
           <FaFacebook size={20} color={"#989898"} />
         </a>
       </Link>
       <Link href="https://pinterest.com/">
-        <a>
+        <a target="_blank">
           <FaPinterest size={20} color={"#989898"} />
         </a>
       </Link>
